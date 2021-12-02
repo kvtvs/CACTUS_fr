@@ -18,8 +18,8 @@ const createSalesAd = (plants) => {
     const name = document.createElement('h2');
     name.innerHTML = plant.name;
 
-    const seller = document.createElement('p');
-    seller.innerHTML = `${plant.seller}`;
+    const sellername = document.createElement('p');
+    sellername.innerHTML = `${plant.sellername}`;
 
     const description = document.createElement('p');
     description.innerHTML = `${plant.description}`;
@@ -27,8 +27,8 @@ const createSalesAd = (plants) => {
     const price = document.createElement('p');
     price.innerHTML = `${plant.price}€`;
 
-    const date = document.createElement('p');
-    date.innerHTML = `${plant.date}`;
+    const postdate = document.createElement('p');
+    postdate.innerHTML = `${plant.postdate}`;
 
     const buyButton = document.createElement('button');
     buyButton.innerHTML = 'Osta';
@@ -39,7 +39,7 @@ const createSalesAd = (plants) => {
 
     li.appendChild(name);
     li.appendChild(figure);
-    li.appendChild(seller);
+    li.appendChild(sellername);
     li.appendChild(description);
     li.appendChild(price);
     li.appendChild(date);
