@@ -68,6 +68,72 @@ section {
 
 article {
     width: 90%;
-    height: auto;
+    height: 300px;
     background-color: #F3F4F5;
+    display: flex;
+    align-self: flex-end;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+article figure {
+    width: 30%;
+    height: 100%;
+}
+
+article figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 5px;
+    color: grey;
+}
+
+.text {
+    width: 40%;
+    height: 100%;
+    text-align: left;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-between;
+    
+}
+
+.favourite {
+    display: flex;
+    margin-bottom: 35px;
+    
+}
+
+.other {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 30px;
+    
+}
+
+h3 {
+    padding-top: 20px;
+}
+
+button {
+    background-color: #3D2B2B;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #6C935A;
 }
