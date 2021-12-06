@@ -1,8 +1,9 @@
 html, body {
     background-color: white;
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0;
+    padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -51,7 +52,7 @@ i {
 
 aside {
     width: 25%;
-    height: 100%;
+    height: auto;
     background-color: #F3F4F5;
 }
 
@@ -64,60 +65,61 @@ h2 {
 section {
     width: 75%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 article {
-    width: 90%;
-    height: 300px;
+    width: 95%;
+    height: auto;
     background-color: #F3F4F5;
     display: flex;
+    flex-direction: row;
     align-self: flex-end;
-    margin-left: 40px;
     margin-top: 20px;
 }
 
 article figure {
-    width: 30%;
+    width: 40%;
     height: 100%;
+    margin: 25px;
 }
 
 article figure img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
 }
 
 figcaption {
-    margin-top: 5px;
+    margin-top: 10px;
     color: grey;
 }
 
 .text {
-    width: 40%;
-    height: 100%;
+    width: 30%;
     text-align: left;
-    padding-left: 20px;
     display: flex;
     flex-direction: column;   
     justify-content: space-between;
-    
+    margin-left: 10px;
 }
 
 .favourite {
-    display: flex;
-    margin-bottom: 35px;
-    
+    margin-bottom: 50px;
 }
 
 .other {
-    width: 20%;
-    height: 100%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
     padding-right: 30px;
-    
+}
+
+.other p {
+    padding-top: 22px;
 }
 
 h3 {
@@ -131,9 +133,241 @@ button {
     border: none;
     color: white;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 button:hover {
     background-color: #6C935A;
 }
+
+@media only screen and (max-width: 1300px) {
+
+    .wrapper {
+        width: 85%;
+    }
+
+    nav { 
+        width: 30%;
+        
+    }
+
+    header figure img {
+        width: 60%;
+    }
+  
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        vertical-align: middle;
+        padding: 10px;
+    }
+    
+    i {
+        font-size: 20px;
+        color: #6C935A;
+    }
+
+  }
+
+  @media only screen and (max-width: 1110px) {
+    .wrapper {
+        width: 90%;
+    }
+
+  }
+
+  @media only screen and (max-width: 910px){
+      article figure {
+        width: 50%;
+      }
+
+      .text {
+        width: 25%;
+      }
+
+      .text i {
+          font-size: 25px;
+      }
+
+      .other {
+        width: 25%;
+      }
+
+      .other p {
+          padding-top: 25px;
+      }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+
+    header {
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    header figure {
+        width: 50%;
+        margin: 10px;
+    }
+
+    header figure img {
+        width: 180px;
+    }
+
+    nav {
+        width: 50%;
+        padding-right: 10px;
+    }
+
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+i {
+    font-size: 20px;
+    color: #6C935A;
+}
+
+.wrapper {
+    width: 100%;
+
+}
+
+.content {
+    flex-direction: column;
+}
+
+aside {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+article {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+.text {
+    width: 90%;
+}
+
+.favourite i {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.other {
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+
+}
+
+  @media only screen and (max-width: 400px){
+    header {
+        width: 100%;
+    }
+
+    header figure {
+        width: 55%;
+        margin: 10px;
+    }
+
+    header figure img {
+        width: 140px;
+    }
+
+    nav {
+        width: 45%;
+        padding-right: 10px;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 25px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+    
+    i {
+        font-size: 15px;
+        color: #6C935A;
+    }
+
+    .wrapper {
+        width: 100%;
+
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    article {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .favourite i {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .other {
+        width: 90%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .other p {
+        margin-left: 20px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+  }
