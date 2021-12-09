@@ -2,40 +2,40 @@
 
 const url = 'http://localhost:3000'
 
-const ul = document.querySelector('#list');
-
+const section = document.querySelector('section');
+section.innerHTML = '';
 // create the sales ad
-const createSalesAd = (plants) => {
-  ul.innerHTML = '';
-  plants.forEach((plant) => {
+const createSalesAd = (tuotteet) => {
+  tuotteet.forEach((Tuote) => {
+
     const img = document.createElement('img');
-    img.src = url + '/' + plant.filename;
-    img.alt = plant.name;
-    img.classList.add('resp');
+    img.src = // TODO: linkki kuvaan/kuviin! url + '/' + plant.filename;
+    img.alt = Tuote.Nimi;
+    //img.classList.add('resp');
+
+    const figcaption = document.createElement('figcaption');
+    figcaption.innerHTML = `${Tuote.Julkaisu_pvm}`;
 
     const figure = document.createElement('figure').appendChild(img);
+    figure.appendChild(figcaption);
 
-    const name = document.createElement('h2');
-    name.innerHTML = plant.name;
-
-    const sellername = document.createElement('p');
-    sellername.innerHTML = `${plant.sellername}`;
+    const name = document.createElement('h3');
+    name.innerHTML = `${Tuote.Nimi}`;
 
     const description = document.createElement('p');
-    description.innerHTML = `${plant.description}`;
+    description.innerHTML = `${Tuote.Kuvaus}`;
 
     const price = document.createElement('p');
-    price.innerHTML = `${plant.price}€`;
+    price.innerHTML = `${Tuote.Hinta}€`;
 
-    const postdate = document.createElement('p');
-    postdate.innerHTML = `${plant.postdate}`;
+    const seller = document.createElement('p');
+    seller.innerHTML = `${Tuote.KäyttäjäID}`
 
     const buyButton = document.createElement('button');
     buyButton.innerHTML = 'Osta';
     // TODO: function for buying something
 
-    const li = document.createElement('li');
-    li.classList.add('light-border');
+    const article = document.createElement('article');
 
     li.appendChild(name);
     li.appendChild(figure);
