@@ -9,9 +9,9 @@ const createSalesAd = (tuotteet) => {
   tuotteet.forEach((Tuote) => {
 
     const img = document.createElement('img');
-    img.src = // TODO: linkki kuvaan/kuviin! url + '/' + plant.filename;
+    img.src = url + '/' + plant.filename;
     img.alt = Tuote.Nimi;
-    //img.classList.add('resp');
+    img.classList.add('resp');
 
     // figure start
     const figcaption = document.createElement('figcaption');
