@@ -10,7 +10,7 @@ const createSalesAd = (tuotteet) => {
   tuotteet.forEach((Tuote) => {
 
     const img = document.createElement('img');
-    img.src = url + '/' + plant.filename;
+    img.src = url + '/' + plant.Filename;
     img.alt = Tuote.Nimi;
     img.classList.add('resp');
 
