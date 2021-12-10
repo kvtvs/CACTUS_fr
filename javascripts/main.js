@@ -3,6 +3,7 @@
 const url = 'http://localhost:3000'
 
 const section = document.querySelector('section');
+
 section.innerHTML = '';
 // create the sales ad
 const createSalesAd = (tuotteet) => {
