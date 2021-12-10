@@ -13,12 +13,15 @@ const createSalesAd = (tuotteet) => {
     img.alt = Tuote.Nimi;
     //img.classList.add('resp');
 
+    // figure start
     const figcaption = document.createElement('figcaption');
     figcaption.innerHTML = `${Tuote.Julkaisu_pvm}`;
 
     const figure = document.createElement('figure').appendChild(img);
     figure.appendChild(figcaption);
+    // figure end
 
+    //text div start
     const name = document.createElement('h3');
     name.innerHTML = `${Tuote.Nimi}`;
 
@@ -28,23 +31,36 @@ const createSalesAd = (tuotteet) => {
     const price = document.createElement('p');
     price.innerHTML = `${Tuote.Hinta}€`;
 
+    const favourite = document.createElement('div');
+    const i = document.createElement ('i');
+    i.className = 'far fa-star';
+    favourite.appendChild(i);
+
+    const textdiv = document.createElement('div');
+    textdiv.appendChild(name);
+    textdiv.appendChild(description);
+    textdiv.appendChild(price);
+    textdiv.appendChild(favourite);
+    //text div end
+
+    // other div start
     const seller = document.createElement('p');
     seller.innerHTML = `${Tuote.KäyttäjäID}`
 
     const buyButton = document.createElement('button');
-    buyButton.innerHTML = 'Osta';
+    buyButton.innerHTML = 'OSTA NYT';
+
+    const otherdiv = document.createElement('div');
+    otherdiv.appendChild(seller);
+    otherdiv.appendChild(buyButton);
     // TODO: function for buying something
+    //other div end
 
     const article = document.createElement('article');
-
-    li.appendChild(name);
-    li.appendChild(figure);
-    li.appendChild(sellername);
-    li.appendChild(description);
-    li.appendChild(price);
-    li.appendChild(date);
-    li.appendChild(buyButton);
-    ul.appendChild(li);
+    article.appendChild(figure);
+    article.appendChild(textdiv);
+    article.appendChild(otherdiv);
+    section.appendChild(article);
   });
 };
 
