@@ -11,14 +11,16 @@ const createSalesAd = (tuotteet) => {
     const img = document.createElement('img');
     img.src = url + '/' + Tuote.Filename;
     img.alt = Tuote.Nimi;
-    img.classList.add('resp');
+    //img.classList.add('resp');
 
     // figure start
     const figcaption = document.createElement('figcaption');
     figcaption.innerHTML = `${Tuote.Julkaisu_pvm}`;
 
-    const figure = document.createElement('figure').appendChild(img);
+    const figure = document.createElement('figure');
+    figure.appendChild(img)
     figure.appendChild(figcaption);
+    
     // figure end
 
     //text div start
@@ -32,15 +34,20 @@ const createSalesAd = (tuotteet) => {
     price.innerHTML = `${Tuote.Hinta}€`;
 
     const favourite = document.createElement('div');
+    const a = document.createElement('a');
+    a.href = '#';
     const i = document.createElement ('i');
     i.className = 'far fa-star';
-    favourite.appendChild(i);
+    a.appendChild(i);
+    favourite.appendChild(a);
+    favourite.classList.add('favourite')
 
     const textdiv = document.createElement('div');
     textdiv.appendChild(name);
     textdiv.appendChild(description);
     textdiv.appendChild(price);
     textdiv.appendChild(favourite);
+    textdiv.classList.add('text');
     //text div end
 
     // other div start
@@ -53,6 +60,7 @@ const createSalesAd = (tuotteet) => {
     const otherdiv = document.createElement('div');
     otherdiv.appendChild(seller);
     otherdiv.appendChild(buyButton);
+    otherdiv.classList.add('other');
     // TODO: function for buying something
     //other div end
 
@@ -82,3 +90,15 @@ const getPlant = async () => {
 };
 
 getPlant();
+
+document.querySelector('i').addEventListener('click', function() {
+  const icon = this.querySelector('i');
+
+  if (icon.classList.contains('far fa-star')) {
+    icon.classList.remove('far fa-star');
+    icon.classList.add('fas fa-star');
+  } else {
+    icon.classList.remove('fas fa-star');
+    icon.classList.add('far fa-star');
+  }
+});
