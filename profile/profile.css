@@ -1,70 +1,53 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Rubik, sans-serif;
-    box-sizing: border-box;
-}
 
-body {
+html, body {
+    background-color: white;
+    width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
-    font-family: Rubik, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
-    width: 100%;
-    min-height: 100vh;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin: 20px;
-    box-sizing: border-box;
-    overflow: hidden;
+    width: 80%;
+    height: 100%;
+    margin: auto;
 }
 
-.navbar {
+header {
     width: 100%;
     display: flex;
-    align-items: center;
-    border-bottom: solid;
-    border-bottom-color: #6C935A;
-    border-bottom-width: 3px;
-    box-sizing: border-box;
+    justify-content: space-between;
+    border-bottom: solid 3px #6D935A;
 }
-
-.logo {
-    width: 50px;
-    cursor: pointer;
-    margin: 30px 0px;
-}
-
-.menu-icon{
-    width: 25px;
-    cursor: pointer;
-    display: none;
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 3px #6D935A;
 }
 
 nav {
-    flex: 1;
-    text-align: right;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 25px;
 }
 
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 30px;
-}
-nav ul li i {
-    color: #6C935A;
-    font-size: 50px;
-}
-nav ul li a {
-    text-decoration: none;
-    color: #362626;
-    font-size: 14px;
-    display: none;
+.circle {
+    background: rgba(108, 147, 90, 0.35);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    padding: 15px;
 }
 
-nav ul li a:hover {
+i {
+    font-size: 25px;
     color: #6C935A;
 }
 
@@ -72,11 +55,11 @@ nav ul li a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 100px 0px;
+    margin: 30px 0px;
 }
 
 .profiiliteksti {
-    flex-basis: 40%;
+    flex-basis: 80%;
     position: relative;
     margin-left: 50px;
 
@@ -151,8 +134,8 @@ button:hover {
     /*width: 90%;
     border-radius: 100%;
     display: inline-block;*/
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     background-color: #bbb;
     border-radius: 50%;
 
@@ -183,12 +166,60 @@ button:hover {
 
 /*SUOSIKIT OSIO*/
 
-.suosikit{
+.julkaisut{
     background-color: #e3e3e3;
 
 }
+section {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+}
 
-.suosikit h4 {
+article {
+    flex-direction: column;
+    margin-left: 0;
+    /*width: 100%;*/
+    height: auto;
+    display: flex;
+}
+
+article figure {
+    width: 90%;
+    height: 100%;
+    align-self: center;
+}
+
+article figure img {
+    /*width: 100%;*/
+    height: 400px;
+    object-fit: cover;
+}
+
+.text {
+    width: 90%;
+    padding-left: 15px;
+}
+
+.favourite i {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.other {
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 0;
+}
+
+.other p {
+    margin-left: 25px;
+    padding-top: 0;
+}
+
+/*.suosikit h4 {
     text-align: center;
     font-size: 30px;
 }
@@ -209,9 +240,9 @@ button:hover {
     width: 100%;
     max-width: 400px;
     max-height: fit-content;
-}
+} */
 
-/* Responsive layout - makes a one column-layout instead of two-column layout */
+/* Responsive layout */
 @media (max-width: 800px) {
     .img-area {
         flex-direction: column;
@@ -228,65 +259,277 @@ button:hover {
     text-align: center;
 }
 
+
+.julkaisut h4 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(108, 147, 90, 0.35);
+}
+
 /*MOBIILINÄKYMÄ*/
 
-@media only screen and (max-width:700px) {
-    nav ul {
-        width: 100%;
-        background: linear-gradient(#6C935A, #ffffff);
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: 2;
-    }
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-        margin-top: 10px;
+
+@media only screen and (max-width: 1300px) {
+
+    .wrapper {
+        width: 85%;
     }
 
-    nav ul li a {
-        color: #a93232;
-        display: inline-block;
+    nav {
+        width: 30%;
+
     }
 
-    nav ul li i {
-        color: #1f1212;
-        display: none;
-    }
-    .menu-icon{
-        display: block;
-    }
-    #menuList{
-        overflow: hidden;
-        transition: 0.5s;
-    }
-    .tiedot{
-        flex-direction: column-reverse;
-        margin: 50px 0px;
-    }
-    .profiilikuva{
-        flex-basis: 100%;
-        margin-bottom: 50px;
-    }
-    .profiilikuva .controller {
-        width: 100%;
-    }
-    .color-box {
-        transform: translateX(75px);
-    }
-    .profiiliteksti{
-        flex-basis: 100%;
-    }
-    .profiiliteksti h2{
-        font-size: 35px;
+    header figure img {
+        width: 60%;
     }
 
-    .profiiliteksti h3{
-        font-size: 15px;
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 35px;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    i {
+        font-size: 20px;
+        color: #6C935A;
+    }
+
+}
+
+@media only screen and (max-width: 1110px) {
+    .wrapper {
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 910px){
+    article figure {
+        width: 50%;
+    }
+
+    .text {
+        width: 25%;
+    }
+
+    .text i {
+        font-size: 25px;
+    }
+
+    .other {
+        width: 25%;
+    }
+
+    .other p {
+        padding-top: 25px;
     }
 }
 
 
+@media only screen and (max-width: 800px) {
+
+    header {
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    header figure {
+        width: 50%;
+        margin: 10px;
+    }
+
+    header figure img {
+        width: 180px;
+    }
+
+    nav {
+        width: 50%;
+        padding-right: 10px;
+    }
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 33px;
+        vertical-align: middle;
+        padding: 10px;
+    }
+
+    i {
+        font-size: 20px;
+        color: #6C935A;
+    }
+
+    .wrapper {
+        width: 100%;
+
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    article {
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    article figure {
+        width: 90%;
+        height: 100%;
+        align-self: center;
+    }
+
+    article figure img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .text {
+        width: 90%;
+        padding-left: 15px;
+    }
+
+    .favourite i {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .other {
+        width: 90%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-right: 0;
+    }
+
+    .other p {
+        margin-left: 25px;
+        padding-top: 0;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+
+}
+
+@media only screen and (max-width: 400px){
+    header {
+        width: 100%;
+    }
+
+    header figure {
+        width: 55%;
+        margin: 10px;
+    }
+
+    header figure img {
+        width: 140px;
+    }
+
+    nav {
+        width: 45%;
+        padding-right: 10px;
+    }
+
+    .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 25px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+    i {
+        font-size: 15px;
+        color: #6C935A;
+    }
+
+    .wrapper {
+        width: 100%;
+
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    article {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .favourite i {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .other {
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .other p {
+        margin-left: 20px;
+        padding-top: 0;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    article figure {
+        width: 90%;
+        height: 100%;
+        align-self: center;
+    }
+
+    article figure img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+
+
+}
 
 
