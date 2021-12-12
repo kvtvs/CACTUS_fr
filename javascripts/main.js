@@ -72,7 +72,7 @@ const createSalesAd = (tuotteet) => {
   });
 };
 
-//AJAX CALL
+//AJAX CAL
 
 const getPlant = async () => {
   try {
