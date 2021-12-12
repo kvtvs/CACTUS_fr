@@ -72,7 +72,7 @@ const createSalesAd = (tuotteet) => {
   });
 };
 
-//AJAX CAL
+//AJAX CALL
 
 const getPlant = async () => {
   try {
@@ -81,7 +81,7 @@ const getPlant = async () => {
         Authorization: 'Bearer ' + sessionStorage.getItem('token'),
       },
     };
-    const response = await fetch(url + '/plant', fetchOptions);
+    const response = await fetch(url + '/Tuote', fetchOptions); // Jos 
     const plants = await response.json();
     createSalesAd(plants);
   } catch (e){
