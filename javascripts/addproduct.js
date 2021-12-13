@@ -1,5 +1,7 @@
 'use strict';
 const url = 'http://localhost:3000'; // change url when uploading to server
+const path = 'http://127.0.0.1:5500';
+
 
 // select existing html elements
 const addForm = document.querySelector('#addProductForm');
@@ -18,5 +20,5 @@ addForm.addEventListener('submit', async (evt) => {
   const response = await fetch(url + '/plant', fetchOptions);
   const json = await response.json();
   alert(json.message);
-  location.href = './mainpage/main.html';
+  location.href = path + '/mainpage/main.html';
 });

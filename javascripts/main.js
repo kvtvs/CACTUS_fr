@@ -38,6 +38,20 @@ const createSalesAd = (tuotteet) => {
     a.href = '#';
     const i = document.createElement ('i');
     i.className = 'far fa-star';
+
+    i.addEventListener('click', (evt) => {
+    evt.preventDefault();
+      // Tässä kohtaa palvelimelle tieto tykkäyksestä
+      if (i.classList.contains('far')) {
+        i.classList.remove('far');
+        i.classList.add('fas');
+      } else {
+        i.classList.remove('fas');
+        i.classList.add('far');
+      }
+    });
+
+
     a.appendChild(i);
     favourite.appendChild(a);
     favourite.classList.add('favourite')
@@ -81,7 +95,7 @@ const getPlant = async () => {
         Authorization: 'Bearer ' + sessionStorage.getItem('token'),
       },
     };
-    const response = await fetch(url + '/Tuote', fetchOptions); // Jos 
+    const response = await fetch(url + '/plant', fetchOptions);  
     const plants = await response.json();
     createSalesAd(plants);
   } catch (e){
@@ -90,15 +104,3 @@ const getPlant = async () => {
 };
 
 getPlant();
-
-document.querySelector('i').addEventListener('click', function() {
-  const icon = this.querySelector('i');
-
-  if (icon.classList.contains('far fa-star')) {
-    icon.classList.remove('far fa-star');
-    icon.classList.add('fas fa-star');
-  } else {
-    icon.classList.remove('fas fa-star');
-    icon.classList.add('far fa-star');
-  }
-});
