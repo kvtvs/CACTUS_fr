@@ -118,7 +118,7 @@ figcaption {
     padding-right: 30px;
 }
 
-.other p {
+.modify {
     padding-top: 22px;
 }
 
@@ -201,7 +201,7 @@ button:hover {
         width: 25%;
       }
 
-      .other p {
+      .modify {
           padding-top: 25px;
       }
   }
@@ -298,7 +298,7 @@ article figure img {
     padding-right: 0;
 }
 
-.other p {
+.modify {
     margin-left: 25px;
     padding-top: 0;
 }
@@ -382,7 +382,7 @@ h2 {
         justify-content: space-between;
     }
 
-    .other p {
+    .modify {
         margin-left: 20px;
         padding-top: 0;
     }
