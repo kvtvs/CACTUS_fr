@@ -136,6 +136,11 @@ button {
     margin-bottom: 50px;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 button:hover {
     background-color: #6C935A;
 }

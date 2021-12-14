@@ -68,8 +68,10 @@ const createSalesAd = (tuotteet) => {
     const seller = document.createElement('p');
     seller.innerHTML = `${Tuote.KäyttäjäID}`
 
+    
+
     const buyButton = document.createElement('button');
-    buyButton.innerHTML = 'OSTA NYT';
+    buyButton.innerHTML = 'OTA YHTEYTTÄ';
 
     const otherdiv = document.createElement('div');
     otherdiv.appendChild(seller);
