@@ -19,7 +19,16 @@
         <figure>
             <img src="/img/logo3.png">
         </figure>
+        <!-----------mmmmmmmm------
+        <div class="search">
+            <div class="icon"></div>
+            <div class="input">
+                <input type="text" placeholder="Search" id="mysearch">
+            </div>
+        </div>
+        ---------mmmmmmmm------>
         <nav>
+
             <a href="#"><div class="circle"><i class="fas fa-search" aria-hidden="true"></i></div></a>
 
             <a href="/addproduct/addproduct.html"><div class="circle"><i class="fas fa-plus" aria-hidden="true"></i></div></a>
@@ -29,6 +38,9 @@
 
 
     </header>
+
+
+
 
     <div class="tiedot">
         <div class="profiilikuva">
@@ -41,9 +53,7 @@
             <h2>JohnDOE</h2>
             <h3>Hi, my name is John, Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-            <h4>lololo</h4>
-            <button type="button">Edit profile <i class="fas fa-arrow-right"></i>
-            </button>
+            <button type="button" ><a href="../editprofile/editprofile.html">Muokkaa profiilia</A></button>
 
         </div>
 
@@ -162,8 +172,16 @@
     </div>
 </div>
 
+
+<script>
+    const icon = document.querySelector('.icon');
+    const search = document.querySelector('.search');
+    icon.onclick = function(){
+      search.classList.toggle('active')
+    }
+</script>
 <script src="/javascripts/main.js"></script>
-<script src="/javascripts/check-login.js"></script>
+<script src="/javascripts/checklogin.js"></script>
 <script src="/javascripts/serialize.js"></script>
 </body>
 
