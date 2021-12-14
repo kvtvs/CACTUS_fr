@@ -6,7 +6,7 @@ const path = 'http://127.0.0.1:5500';
 // select existing html elements
 const addForm = document.querySelector('#addProductForm');
 
-// submit add cat form
+// submit add product form
 addForm.addEventListener('submit', async (evt) => {
   evt.preventDefault();
   const fd = new FormData(addForm);
