@@ -23,9 +23,9 @@ header {
 nav {
     width: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 25px;
+    padding-right: 10px;
 }
 
 .circle {
@@ -38,6 +38,35 @@ nav {
     vertical-align: middle;
     padding: 15px;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(61, 43, 43, 1);
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.5em;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+    margin-top: 10px;;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 i {
     font-size: 25px;
@@ -118,7 +147,7 @@ figcaption {
     padding-right: 30px;
 }
 
-.other p {
+.modify {
     padding-top: 22px;
 }
 
@@ -201,7 +230,7 @@ button:hover {
         width: 25%;
       }
 
-      .other p {
+      .modify {
           padding-top: 25px;
       }
   }
@@ -298,7 +327,7 @@ article figure img {
     padding-right: 0;
 }
 
-.other p {
+.modify {
     margin-left: 25px;
     padding-top: 0;
 }
@@ -382,7 +411,7 @@ h2 {
         justify-content: space-between;
     }
 
-    .other p {
+    .modify {
         margin-left: 20px;
         padding-top: 0;
     }

@@ -65,17 +65,24 @@ const createSalesAd = (tuotteet) => {
     //text div end
 
     // other div start
-    const seller = document.createElement('p');
-    seller.innerHTML = `${Tuote.KäyttäjäID}`
-
+    const modifyButton = document.createElement('button');
+    modifyButton.innerHTML = 'MUOKKAA';
     
-
     const buyButton = document.createElement('button');
     buyButton.innerHTML = 'OTA YHTEYTTÄ';
 
+    const a2 = document.createElement('a');
+    a2.href = 'mailto:esimerkki@sahkoposti.com';
+    a2.appendChild(buyButton);
+
+    const a3 = document.createElement('a');
+    a3.href = '/modifyproduct/modifyproduct.html';
+    a3.classList.add('modify');
+    a3.appendChild(modifyButton);
+
     const otherdiv = document.createElement('div');
-    otherdiv.appendChild(seller);
-    otherdiv.appendChild(buyButton);
+    otherdiv.appendChild(a3);
+    otherdiv.appendChild(a2);
     otherdiv.classList.add('other');
     // TODO: function for buying something
     //other div end
