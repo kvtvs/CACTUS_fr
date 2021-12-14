@@ -23,7 +23,7 @@ header {
 nav {
     width: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-right: 25px;
 }
