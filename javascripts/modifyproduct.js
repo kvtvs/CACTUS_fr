@@ -10,10 +10,28 @@ const getQParam = (param) => {
 };
 
 // get id from address
-const plant_id = getQParam('id');
+const plant_id = getQParam('plant_id');
 
 // select existing html elements
 const modForm = document.querySelector('#modifyProductForm');
+const deleteButton = document.querySelector('#delete');
+
+deleteButton.addEventListener('click', async (evt) => {
+  evt.preventDefault();
+  const fetchOptions = {
+    method: 'DELETE',
+    headers: {
+      
+      Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+      
+    },
+  };
+  console.log(fetchOptions);
+  const response = await fetch(url + '/plant/' + plant_id, fetchOptions);
+  const plant = await response.json();
+  console.log(plant);
+  location.href = path + '/mainpage/main.html'; 
+})
 
 // get user data
 const user = JSON.parse(sessionStorage.getItem('user'));
@@ -28,10 +46,13 @@ const getPlant = async (id) => {
   const response = await fetch(url + '/plant/' + id, fetchOptions);
   const plant = await response.json();
   const inputs = modForm.querySelectorAll('input');
-  inputs[0].value = plant.name;
-  inputs[1].value = plant.price;
-  inputs[2].value = plant.description;
+  const textarea = modForm.querySelector('textarea');
+  inputs[0].value = plant.Nimi;
+  inputs[1].value = plant.Hinta;
+  textarea.value = plant.Kuvaus;
 };
+
+getPlant(plant_id);
 
 // submit modify form
 modForm.addEventListener('submit', async (evt) => {

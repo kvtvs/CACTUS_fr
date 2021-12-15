@@ -15,12 +15,12 @@
                 <div class="form-wrapper">
                     <h3>Muokkaa ilmoitusta</h3>
                     <form novalidate action="http://localhost:3000/cat" method="post" class="light-border"
-                        enctype="multipart/form-data" id="addProductForm">
+                        enctype="multipart/form-data" id="modifyProductForm">
                         <input class="light-border" type="text" name="name" placeholder="Kasvin nimi" required>
                         <input class="light-border" type="number" required step="0.1" name="price" placeholder="Hinta">
                         <textarea class="light-border" name="description" placeholder="Kuvaus" rows="4"></textarea>
                         <button class="light-border" type="submit">Tallenna muutokset</button>
-                        <button class="light-border" type="submit">Poista ilmoitus</button>
+                        <a class="light-border" href="#" id="delete">Poista ilmoitus</a>
                     </form>
                 </div>
             </div>
