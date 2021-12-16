@@ -1,8 +1,8 @@
 'use strict';
 
 const url = 'http://localhost:3000'
-//const path = 'http://127.0.0.1:5500';
-const path = 'http://localhost:63342/CACTUS_fr';
+const path = 'http://127.0.0.1:5500';
+//const path = 'http://localhost:63342/CACTUS_fr';
 
 const plantList = document.getElementById('plantList');
 const searchBar = document.getElementById('searchBar');

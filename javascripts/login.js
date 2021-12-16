@@ -1,8 +1,8 @@
 'use strict';
-//const url = 'http://localhost:3000'; // change url when uploading to server
-const url ='https://http://10.114.34.88/app/'
-//const path = 'http://127.0.0.1:5500';
-const path = 'http://localhost:63342/CACTUS_fr';
+const url = 'http://localhost:3000'; // change url when uploading to server
+//const url ='https://http://10.114.34.88/app/'
+const path = 'http://127.0.0.1:5500';
+//const path = 'http://localhost:63342/CACTUS_fr';
 
 // select existing html elements
 const loginForm = document.querySelector('#login-form');
