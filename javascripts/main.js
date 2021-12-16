@@ -1,6 +1,7 @@
 'use strict';
 
 const url = 'http://localhost:3000'
+const user = JSON.parse(sessionStorage.getItem('user'));
 
 const section = document.querySelector('section');
 
@@ -76,9 +77,12 @@ const createSalesAd = (tuotteet) => {
     a2.appendChild(buyButton);
 
     const a3 = document.createElement('a');
-    a3.href = '/modifyproduct/modifyproduct.html';
+    a3.href = '/modifyproduct/modifyproduct.html?plant_id=' + Tuote.TuoteID;
     a3.classList.add('modify');
+
+    if (Tuote.KäyttäjäID === user.KäyttäjäID) {
     a3.appendChild(modifyButton);
+  };
 
     const otherdiv = document.createElement('div');
     otherdiv.appendChild(a3);

@@ -45,14 +45,21 @@ html, body {
   width: 90%;
 }
 
+
 input,
 button,
-textarea {
+textarea,
+a {
   display: inline-block;
   width: 100%;
   margin: 0.5em 0;
 }
 
+a {
+  text-align: center;
+  color: rgba(61, 43, 43, 1);
+  text-decoration: none;
+}
 
 button {
     display: inline-block;
@@ -63,6 +70,8 @@ button {
     background-color: #6C935A;
     color: white;
     font-weight: 700;
+    padding: 1em;
+    font-size: 1em;
 }
 
 button:hover{
