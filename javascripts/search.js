@@ -13,17 +13,17 @@ console.log(searchBar);
 searchBar.addEventListener('keyup', (e) => {
   console.log(e.target.value);
 });
+*/
 
- */
 
 
 searchBar.addEventListener('keyup', (e) => {
   const searchString = e.target.value.toLowerCase();
 
-  const filteredPlants = plants.filter((character) => {
+  const filteredPlants = plants.filter((Tuote) => {
     return (
-        character.name.toLowerCase().includes(searchString) ||  //joku muu kuin character??
-        character.description.toLowerCase().includes(searchString)
+        Tuote.Nimi.toLowerCase().includes(searchString) ||
+        Tuote.Kuvaus.toLowerCase().includes(searchString)
 
     );
   });
@@ -44,14 +44,15 @@ const loadPlants = async () => {
   }
 };
 
-const displayCharacters = (characters) => {
-  const htmlString = characters
-  .map((character) => {
+const displayCharacters = (tuotteet) => {
+  const htmlString = tuotteet
+  .map((Tuote) => {
     return `
             <li class="character">
-                <h2>${character.name}</h2>
-                <p>House: ${character.house}</p>
-                <img src="${character.image}"></img>
+                <h2>${Tuote.Nimi}</h2>
+                <p>Kuvaus: ${Tuote.Kuvaus}</p>
+                <p>Hinta: ${Tuote.Hinta}</p>
+                <img src="${Tuote.Filename}"></img>
             </li>
         `;
   })
