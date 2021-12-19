@@ -83,10 +83,3 @@ modForm.addEventListener('submit', async (evt) => {
   }
   location.href = path + '/mainpage/main.html';
 });
-
-// start filling the form
-//if (user.role === 0) {
-  //getUsers(); // if admin
-//} else {
-  //getCat(cat_id); // if regular user
-//}

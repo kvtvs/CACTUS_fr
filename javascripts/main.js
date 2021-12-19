@@ -42,7 +42,6 @@ const createSalesAd = (tuotteet) => {
 
     i.addEventListener('click', (evt) => {
     evt.preventDefault();
-      // Tässä kohtaa palvelimelle tieto tykkäyksestä
       if (i.classList.contains('far')) {
         i.classList.remove('far');
         i.classList.add('fas');
@@ -88,7 +87,6 @@ const createSalesAd = (tuotteet) => {
     otherdiv.appendChild(a3);
     otherdiv.appendChild(a2);
     otherdiv.classList.add('other');
-    // TODO: function for buying something
     //other div end
 
     const article = document.createElement('article');
