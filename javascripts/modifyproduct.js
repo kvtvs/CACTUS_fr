@@ -3,7 +3,7 @@
 const url ='https://10.114.34.88/app/'
 //const path = 'http://127.0.0.1:5500';
 //const path = 'http://localhost:63342/CACTUS_fr';
-const path = 'https://10.114.34.88/~omena/CACTUS_fr/';
+const path = 'https://10.114.34.88/~omena/CACTUS_fr';
 
 // get query parameter
 const getQParam = (param) => {
