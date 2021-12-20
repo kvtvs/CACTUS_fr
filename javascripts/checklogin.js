@@ -1,8 +1,10 @@
 (async () => {
   'use strict';
-  const url = 'http://localhost:3000'; // change url when uploading to server
-  //const path = 'http://127.0.0.1:5500';
-  //const path = 'http://localhost:63342/CACTUS_fr';
+  //const url = 'http://localhost:3000'; // change url when uploading to server
+  const url ='https://10.114.34.88/app/'
+//const path = 'http://127.0.0.1:5500';
+//const path = 'http://localhost:63342/CACTUS_fr';
+  const path = 'https://10.114.34.88/~CACTUS_fr/';
 
   // check sessionStorage
   if (!sessionStorage.getItem('token') || !sessionStorage.getItem('user')) {
